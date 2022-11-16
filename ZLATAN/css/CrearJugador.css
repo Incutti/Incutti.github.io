@@ -1,0 +1,225 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image:url(../Img/fondoFIFA.png);
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+#fondohead{
+    position: absolute;
+    margin-left: 0%;
+    height: 15%;
+    width: 100%;
+    filter: brightness(25%);}
+
+#FPerfil{
+    position: absolute;
+    align-items: initial;
+    width: 6.4%;
+    margin-left: -4%;
+}
+#espaciador{
+    opacity: 0%;
+    align-items: initial;
+    width: 6.4%;
+    height: 12.8%;
+    margin-left: 15%;
+}
+#Titulo{
+    position: absolute;
+    
+    top: 2.2%; left: 19.5%; right: 65%;
+    font-family: 'Roboto', sans-serif;
+}
+#IBRA{
+    position: absolute;
+    top: 7%; left: 20.5%; right: 65%;
+    font-size: 165%;
+    font-family: 'Roboto', sans-serif;
+}
+#EMilan{
+    position: absolute;
+    width: 2%;
+    margin-left: 24.5%;
+    margin-top: 1.8%;
+}
+#ACMILAN{
+    margin-top: .5%;
+    margin-left: 2%;
+    position: absolute;
+    font-size: 115%;
+    color: rgb(255, 255, 255);
+    top: 3.2%; left: 46%;
+    font-family: 'Roboto', sans-serif;
+}
+#Bandera{
+    position: absolute;
+    width: 3.5%; 
+    margin-left: 48%;
+    margin-top: 2.2%;
+}
+#NACION{
+    position: absolute;
+    font-size: 115%;
+    margin-top: .5%;
+    color: white;
+    top: 3.2%; left: 73%;
+    font-family: 'Roboto', sans-serif;
+} 
+
+#Logo{
+    position: fixed;
+    width: 6.75%;
+    margin-left: 2%;
+    margin-top: 27%;
+    margin-bottom: 5%;
+    
+}
+nav{
+    background-color: gray;
+    color: red;
+    width: 100%;
+    list-style-type: none;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    position: sticky;
+    top: 0%;
+    margin-bottom: 3%;
+}
+nav li {
+    display: inline-flex;
+}
+nav a{
+    font-size: 90%;
+    text-decoration: none;
+    color: white;
+    padding: 5%;
+    width: 175px;
+}
+nav li:hover{
+    background-color: rgb(102, 102, 102);
+}
+#ibrahimovic{
+    width: 76%;
+    margin-top: 2%;
+    margin-left: 12%;
+}
+h1{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: .5%;
+}
+#ibrahimovic{
+    position: absolute;
+    width: 20%;
+    margin-top: 2%;
+    margin-left: 12%;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    box-shadow: 7px 11px 19px 7px rgba(51, 51, 51, 0.63);
+    -webkit-box-shadow: 7px 11px 19px 7px rgba(51, 51, 51, 0.63);
+    -moz-box-shadow: 7px 11px 19px 7px rgba(51, 51, 51, 0.63);
+}
+#Carta{
+    position: absolute;
+    width: 20%;
+    margin-left: 40.2%;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input:invalid{
+    color: red;
+}
+input:placeholder-shown{
+    color: rgb(70, 58, 18);
+}
+.INPUT{
+    text-align: center;
+    color: rgb(70, 58, 18);
+    font-family: 'Oswald', sans-serif;
+    font-size: 125%;
+    position: absolute;
+    background : inherit;
+    border: none;
+}
+
+#MEDIA{
+    font-size: 240%;
+    margin-top: 3%;
+    margin-left: 42.9%;
+}
+#PAC{
+    font-size: 125%;
+    margin-top: 18%;
+    margin-left: 43.5%;
+}
+#DRI{
+    font-size: 125%;
+    margin-top: 18%;
+    margin-left: 51.2%;
+}
+#SHO{
+    font-size: 125%;
+    margin-top: 20%;
+    margin-left: 43.5%;
+}
+#DEF{
+    font-size: 125%;
+    margin-top: 20%;
+    margin-left: 51.2%;
+}
+#PAS{
+    font-size: 125%;
+    margin-top: 22%;
+    margin-left: 43.5%;
+}
+#PHY{
+    font-size: 125%;
+    margin-top: 22%;
+    margin-left: 51.2%;
+}
+#login{
+    align-items: center;
+    position: absolute;
+    width: 7%;
+    height: 5%;
+    margin-top: 29%;
+    margin-left: 46.4%;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 115%;
+    font-family: 'Oswald', sans-serif;
+    font-style: italic;
+}
+#login:hover{
+    font-size: 135%;
+    cursor: pointer;
+}
+
+#Descripcion{
+    color: white;
+    margin-left: 65%;
+    margin-top: 4.5%;
+    font-size: 125%;
+    font-family: 'Oswald', sans-serif;
+    line-height: 270%;
+    font-style: italic;
+}
+#FOOTER{
+    margin-top: 3.5%;
+    text-align: center;
+    color: white;
+    font-size: 125%;
+    font-family: 'Oswald', sans-serif;
+    line-height: 274%;
+    font-style: italic;
+}
