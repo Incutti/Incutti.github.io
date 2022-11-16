@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Zlatan Ibrahimovic</title>
+        <link rel="shortcut icon" href="Img/Logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="css/CrearJugador.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    </head>
+
+    <body bgcolor="black">
+        <header>
+            <img id="fondohead" src="Img/ibrarecortado.JPG" alt="ZLATAN">
+            <img id="espaciador" src="Img/zlattan perfil.png" alt="ZLATAN">
+            <img id="FPerfil" src="Img/zlattan perfil.png" alt="ZLATAN">
+            <h1 id="Titulo">Zlatan</h1>
+            <h1 id="IBRA">Ibrahimovic</h1>
+            <img id="EMilan" src="Img/escudo milan.png" alt="MILAN">
+            <h1 id="ACMILAN">AC Milan</h1>
+            <img id="Bandera" src="Img/Bandera_Suecia.png" alt="MILAN">
+            <h1 id="NACION">Suecia</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Trayectoria2.html">Trayectoria</a></li>
+                <li><a href="Estadisticas2.html">Estadísticas</a></li>
+                <li><a href="Login.html">Cuenta</a></li>
+                <li><a href="CrearJugador.html">Valoración</a></li>
+            </ul>
+        </nav>
+
+        <img id="Logo" src="Img/Logo.png" alt="LOGO">
+        <img id="ibrahimovic" src="Img/portadaFifaZlatan.png">
+        <img id="Carta" src="Img/Carta4.png" alt="">
+        <form id="formulario">
+            <input id="MEDIA" class="INPUT" type="number" name="MED" placeholder="-" min="0" max="99" step="1" required>
+            <input id="PAC" class="INPUT" type="number" name="PAC" placeholder="-" min="0" max="99" step="1" required>
+            <input id="DRI" class="INPUT" type="number" name="DRI" placeholder="-" min="0" max="99" step="1" required>
+            <input id="SHO" class="INPUT" type="number" name="SHO" placeholder="-" min="0" max="99" step="1" required>
+            <input id="DEF" class="INPUT" type="number" name="DEF" placeholder="-" min="0" max="99" step="1" required>
+            <input id="PAS" class="INPUT" type="number" name="PAS" placeholder="-" min="0" max="99" step="1" required>
+            <input id="PHY" class="INPUT" type="number" name="PHY" placeholder="-" min="0" max="99" step="1" required>
+            <button id="login" type="submit" title="Ingresar" name="Ingresar">ENVIAR</button>
+        </form>
+        <p id="Descripcion">
+            VALORACION GENERAL DEL JUGADOR<br>
+            PACE es la media entre velocidad y aceleración<br>
+            DRIBLING es el regate<br>
+            SHOOTING es la etadistica general de tiro<br>
+            DEFENDING es la habilidad defensiva<br>
+            PASSING es la calidad que tendrán sus pases<br>
+            PHYSICAL es el estado fisico<br> 
+        </p>
+        <footer>
+            <p id="FOOTER">
+                Al enviar este formulario participarás en un sorteo de un FIFA 23: ZLATAN EDITION para PS5
+            </p><br>
+        </footer>
+        <script>
+            $("#formulario").submit(function(event) {
+                event.preventDefault();
+                //console.log("qwe");
+                $.ajax({
+                    method: "GET",
+                    url:"DBCarta.php",
+                    data: { MED: $("#MEDIA").val(), PAC: $("#PAC").val(), DRI: $("#DRI").val(), SHO: $("#SHO").val(), DEF: $("#DEF").val(), PAS: $("#PAS").val(), PHY: $("#PHY").val()}
+                })
+                .done(function(msg){
+                    console.log(msg);
+                    alert(msg);
+                    if(msg=="INFORMACION ENVIADA"){
+                        location.href ="index.html";
+                    }
+                    if(msg=="ERROR"){
+                        location.href = "Login.html";
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
